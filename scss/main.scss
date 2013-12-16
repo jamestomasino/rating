@@ -1,0 +1,160 @@
+// Compass definitions
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "sassy-buttons";
+
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@include font-face("Raleway", font-files( "../fonts/raleway.woff", "../fonts/raleway.otf", "../fonts/raleway.ttf", "../fonts/raleway.svg"), "../fonts/raleway.eot");
+
+@mixin font-heading () {
+	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+}
+
+@mixin font-body () {
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+html { height: 100%; overflow:hidden; }
+body {
+	background-color: #A8A8A8;
+	height:100%;
+	position:relative;
+	@include background( radial-gradient(#205983, #0A2742) );
+	overflow: auto;
+}
+
+.wrapper {
+	position: relative;
+	width: 700px;
+	margin: 0 auto;
+
+	.form {
+		margin: 50px 0;
+		@include border-radius(30px);
+		@include box-shadow(black 2px 2px 10px);
+
+		header {
+			@include font-heading;
+			@include border-top-radius(30px);
+			@include box-sizing(border-box);
+			color: #fff;
+			padding: 30px 0 20px 0;
+			background-color: #ED4C4C;
+			text-align: center;
+			font-size: 30px;
+		}
+
+		fieldset {
+			@include font-body;
+			@include border-bottom-radius(30px);
+			background-color: #fff;
+			padding: 40px;
+			font-size: 22px;
+
+			.number_holder {
+				text-align: center;
+
+				input {
+					margin-top: 30px;
+					text-align: center;
+					@include border-radius(10px);
+					@include box-shadow(rgba(white, 0.15) 0 1px 0, rgba(black,0.2) 0 2px 4px inset, rgba(white, 0.1) 0 0 12px);
+					@include text-shadow( rgba(0,0,0,.6) 0 2px 5px );
+					@include box-sizing(border-box);
+					background:rgba(0,0,0,.4);
+					width: 100px;
+					color: #fff;
+					padding: 10px;
+					border: none;
+					padding:8px 20px;
+					font-family:'Fjalla One', sans-serif;
+					font-size: 22px;
+					font-weight: 400;
+					letter-spacing: 2px;
+				}
+
+			}
+
+			.input_holder {
+				display: none;
+				text-align: center;
+				input {
+					margin-top: 30px;
+					text-align: center;
+					@include border-radius(10px);
+					@include box-shadow(rgba(white, 0.15) 0 1px 0, rgba(black,0.2) 0 2px 4px inset, rgba(white, 0.1) 0 0 12px);
+					@include text-shadow( rgba(0,0,0,.6) 0 2px 5px );
+					@include box-sizing(border-box);
+					background:rgba(0,0,0,.4);
+					width: 300px;
+					color: #fff;
+					padding: 10px;
+					border: none;
+					padding:8px 20px;
+					font-family:'Fjalla One', sans-serif;
+					font-size: 22px;
+					font-weight: 400;
+					letter-spacing: 2px;
+				}
+
+			}
+
+			.display_holder {
+				display: none;
+				margin-bottom: 15px;
+
+				.left {
+					float: left;
+					@include border-radius(10px);
+					@include text-shadow( rgba(0,0,0,.6) 0 2px 5px );
+					@include box-sizing(border-box);
+					width: 300px;
+					padding: 10px;
+					border: none;
+					padding:8px 20px;
+					font-family:'Fjalla One', sans-serif;
+					font-size: 22px;
+					font-weight: 400;
+					letter-spacing: 1px;
+				}
+
+				.right {
+					float: right;
+					text-align: right;
+					@include border-radius(10px);
+					@include text-shadow( rgba(0,0,0,.6) 0 2px 5px );
+					@include box-sizing(border-box);
+					width: 300px;
+					padding: 10px;
+					border: none;
+					padding:8px 20px;
+					font-family:'Fjalla One', sans-serif;
+					font-size: 22px;
+					font-weight: 400;
+					letter-spacing: 1px;
+				}
+			}
+
+			.submit_holder {
+				clear: both;
+				width: 100%;
+				text-align: center;
+
+				.submit {
+					//#205983, #0A2742
+					@include sassy-button("shiny", 10px, 19px, #205983);
+					margin-top: 20px;
+				}
+
+			}
+		}
+	}
+
+}
+
+a {
+	text-decoration: none;
+}
+

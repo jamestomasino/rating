@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<title>Rate It</title>
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+		<script type="text/javascript" src="js/head.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<section class="form">
+				<header>
+					Rate It
+				</header>
+				<fieldset>
+
+					<div class="number_holder">
+						<div class="header">
+							How many items will you be rating?
+						</div>
+						<input type="text" maxlength="4" id="num_items" name="num_items" value="10"/>
+						<div class="submit_holder">
+							<a href="#" class="submit" onclick="selectNumItems(); return false;">Submit</a>
+						</div>
+					</div>
+
+					<div class="input_holder">
+						<div class="header">
+							Item Name:
+						</div>
+						<input type="text" id="item_name" name="item_name" value="Item #"/>
+						<div class="submit_holder">
+							<a href="#" class="submit" onclick="nameItem(); return false;">Submit</a>
+						</div>
+					</div>
+						
+					<div class="display_holder">
+						<div class="left">Left Option</div>
+						<div class="right">Right Option</div>
+
+						<div class="submit_holder">
+							<a href="#" class="submit" onclick="calculate(1); return false;">&larr;</a>
+							<a href="#" class="submit" onclick="calculate(0.5); return false;">&harr;</a>
+							<a href="#" class="submit" onclick="calculate(0); return false;">&rarr;</a>
+						</div>
+					</div>
+
+					<div class="result_holder">
+						<div class="result"></div>
+					</div>
+
+				</fieldset>
+			</section>
+
+		</div>
+	</body>
+</html>
