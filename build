@@ -1,5 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 # Compile Sass/Compass/Susy Compressed
-compass compile --output-style compressed --no-line-comments --force
+compass compile --output-style compressed --force
 sprocketize
-gzip -9 -c css/main.css > css/main.css.gz 
+rsync -av sjs/polyfill/ js/polyfill
+function gzipkeep {
+	for file in "$1"/* ; do
+		if [[ "$file" != *gz ]]; then
+			gzip -9 -c -- "$file" > "$file.gz"
+		fi
+	done
+}
+gzipkeep js/polyfill
+gzipkeep css
