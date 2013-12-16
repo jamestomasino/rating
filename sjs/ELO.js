@@ -2,6 +2,7 @@
 	"use strict";
 
 	var ELO = function () {
+		this.id = "";
 		this.rating = 1200;
 		this.games_played = 0;
 		this.games_won = 0;
