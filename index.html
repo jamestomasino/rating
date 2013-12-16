@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<title>Chess Rating</title>
+
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+		<script type="text/javascript" src="js/head.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<section class="form">
+				<header>
+					ELO Rating Calculator
+				</header>
+				<fieldset>
+					<div class="input_holder effect4">
+						<label class="label" for="player_1_rating">White ELO</label>
+						<input class="old_rating" type="text" maxlength="4" id="player_1_rating" name="player_1_rating" value="1200"/>
+					</div>
+
+					<div class="input_holder effect4">
+						<label class="label" for="player_2_rating">Black ELO</label>
+						<input class="old_rating" type="text" maxlength="4" id="player_2_rating" name="player_2_rating" value="1200"/>
+					</div>
+
+					<div class="input_holder radio_holder">
+						<p class="radio_label">Winner</p>
+						<div class="radio_group"><input id="radio_white" class="toggle toggle-left" type="radio" value="white" name="winner"><label for="radio_white" class="btn">White</label><input id="radio_black" class="toggle toggle-both" type="radio" value="black" name="winner"><label for="radio_black" class="btn">Black</label><input id="radio_draw" class="toggle toggle-right" type="radio" value="draw" name="winner" checked><label for="radio_draw" class="btn">Draw</label></div>
+					</div>
+
+					<div class="submit_holder"><a href="#" class="submit" onclick="calculate(); return false;">Submit</a></div>
+				</fieldset>
+			</section>
+
+			<section class="output">
+				<header>
+					New ELO Ratings
+				</header>
+				<section class="results">
+					<div><span class="label">White ELO:</span> <span class="new_rating" id="player_1_new_rating"></span></div>
+					<div><span class="label">Black ELO:</span> <span class="new_rating" id="player_2_new_rating"></span></div>
+				</section>
+			</section>
+
+		</div>
+	</body>
+</html>
